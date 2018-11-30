@@ -1,8 +1,10 @@
 
 <?php
-echo "Hello world!";
+
 $json_source = file_get_contents('data.txt');
-echo "<p>$json_source</p>" ;
+
+$data=json_decode($json_source);
+
 
 ?>
 <!DOCTYPE html>
@@ -16,7 +18,24 @@ echo "<p>$json_source</p>" ;
     <body>
         <h1>Température</h1>
 
-        <img src="img/thermometer.jpg">
+        <p>
+          <?php
+
+              echo "$json_source" ;
+           ?>
+
+        </p>
+
+
+        <p> <?php
+          echo "il fait ". $data->temperature." avec ". $data->humidite."% d'humidité";
+            ?>
+        </p>
+
+
+        <div id="thermometer">
+            <div id="bargraph"></div>
+          </div>
 
 
     </body>

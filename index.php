@@ -1,6 +1,9 @@
 
 <?php
 echo "Hello world!";
+$json_source = file_get_contents('data.txt');
+echo "<p>$json_source</p>" ;
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +15,9 @@ echo "Hello world!";
     </head>
     <body>
         <h1>Température</h1>
+
         <img src="img/thermometer.jpg">
+
 
     </body>
 

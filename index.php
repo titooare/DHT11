@@ -1,6 +1,6 @@
 
-<?php 
-echo "Hello world!"; 
+<?php
+echo "Hello world!";
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,7 @@ echo "Hello world!";
     </head>
     <body>
         <h1>Température</h1>
-
+        <img src="img/thermometer.jpg">
 
     </body>
 

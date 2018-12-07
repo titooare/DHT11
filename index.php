@@ -5,6 +5,9 @@ $json_source = file_get_contents('data.txt');
 
 $data=json_decode($json_source);
 
+$bargraph_height = 161 + $data->temperature * 4;
+
+$bargraph_top = 315  - $data->temperature * 4;
 
 ?>
 <!DOCTYPE html>
@@ -22,6 +25,7 @@ $data=json_decode($json_source);
           <?php
 
               echo "$json_source" ;
+            
            ?>
 
         </p>
@@ -31,10 +35,21 @@ $data=json_decode($json_source);
           echo "il fait ". $data->temperature." avec ". $data->humidite."% d'humidité";
             ?>
         </p>
+        <p>
+          <?php
 
+
+
+          $filename = 'data.txt';
+          if (file_exists($filename)) {
+              echo " Le  ". date ("d/m/y"." à ". "H:i:s.", filemtime($filename));
+          }
+          ?>
+
+        </p>
 
         <div id="thermometer">
-            <div id="bargraph"></div>
+            <div id="bargraph" style="height:<?php echo $bargraph_height ; ?>px;top:<?php echo $bargraph_top ; ?>px "></div>
           </div>
 
 

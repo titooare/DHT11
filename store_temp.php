@@ -4,14 +4,14 @@
     $filename_temperature= "data.txt";
     $data_json= file_get_contents("php://input");
 
-/*$data = json_decode($data_json);
+$data = json_decode($data_json);
 if (! $data){
-    http_reponse_code(415);
+    http_response_code(415);
     exit();
 }elseif(! $data->temperature || ! $data->humidite){
-    http_reponse_code(400);
+    http_response_code(400);
     exit();
-}*/
+}
 
 
 

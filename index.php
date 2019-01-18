@@ -13,6 +13,7 @@ $bargraph_top = 315  - $data->temperature * 4;
 <!DOCTYPE html>
 <html>
     <head>
+         <meta http-equiv="refresh" content="1">
 
         <title>température</title>
         <link rel="stylesheet" media="screen" type="text/css" title="style"         href="main.css"/>
